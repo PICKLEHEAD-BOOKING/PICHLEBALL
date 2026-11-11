@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Đặt lại mật khẩu - Picklehead Booking</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="XacThuc.css">
+</head>
+<body data-page="reset">
+<main class="auth-card">
+  <h1>Đặt lại mật khẩu</h1>
+  <p class="sub">Tạo mật khẩu mới cho tài khoản <strong id="resetTarget"></strong> để tiếp tục đăng nhập.</p>
+  <form novalidate>
+    <div class="field"><label class="required"for="password">Mật khẩu mới</label>
+      <div class="input-wrap"><input id="password" name="password" type="password" placeholder="Nhập mật khẩu mới" autocomplete="new-password"><button type="button" class="eye" data-toggle-pw></button></div></div>
+    <div class="field"><label class="required"for="confirm">Xác nhận mật khẩu</label>
+      <div class="input-wrap"><input id="confirm" name="confirm" type="password" placeholder="Nhập lại mật khẩu mới" autocomplete="new-password"><button type="button" class="eye" data-toggle-pw></button></div></div>
+    <button class="btn btn-primary" type="submit">Cập nhật mật khẩu</button>
+  </form>
+</main>
+<script src="Router.js"></script>
+<script src="XacThuc.js"></script>
+</body>
+</html>
