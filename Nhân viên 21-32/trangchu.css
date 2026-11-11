@@ -1,0 +1,280 @@
+/* Trang chủ nhân viên — dùng cùng style.css */
+body { font-family: 'Poppins', 'Inter', sans-serif; }
+
+.main-content { padding: 32px 36px 56px; }
+
+.home-head {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.home-head h1 {
+    color: #1F2A24;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+}
+
+.home-head p {
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.primary-button {
+    height: 44px;
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 0;
+    border-radius: 8px;
+    color: var(--white);
+    background: var(--green-dark);
+    font-size: 13px;
+    font-weight: 500;
+    white-space: nowrap;
+    cursor: pointer;
+    transition: background .15s;
+}
+
+.primary-button:hover { background: #145425; }
+
+.primary-button svg {
+    width: 18px;
+    height: 18px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 2;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.shift-banner {
+    height: 91px;
+    margin-bottom: 24px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    border-radius: 12px;
+    color: var(--white);
+    background: linear-gradient(90deg, #1A6C2E 0%, #2D8650 55%, #3B9A5F 100%);
+}
+
+.shift-icon {
+    width: 48px;
+    height: 48px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: var(--green-dark);
+    background: rgba(255, 255, 255, .88);
+}
+
+.shift-icon svg,
+.stat-top svg {
+    width: 22px;
+    height: 22px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.shift-banner h2 {
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.shift-banner p {
+    margin-top: 4px;
+    color: #DDEBE1;
+    font-size: 11px;
+}
+
+.stats {
+    margin-bottom: 24px;
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 16px;
+}
+
+.stat-card,
+.card {
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.stat-card {
+    min-height: 142px;
+    padding: 20px;
+}
+
+.stat-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #6D7A72;
+    font-size: 12px;
+}
+
+.stat-top svg { color: var(--green); }
+
+.stat-number {
+    margin: 12px 0 14px;
+    display: block;
+    color: #1F2A24;
+    font-size: 30px;
+    line-height: 40px;
+    font-weight: 600;
+}
+
+.stat-card p {
+    color: var(--green);
+    font-size: 11px;
+}
+
+.home-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 310px;
+    gap: 20px;
+    align-items: start;
+}
+
+.card { padding: 24px; }
+
+.card-title {
+    margin-bottom: 20px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.table-scroll { overflow-x: auto; }
+.queue-table { min-width: 640px; }
+
+.queue-grid {
+    display: grid;
+    grid-template-columns: 200px 75px 143px 160px 1fr;
+    align-items: center;
+    padding: 0 12px;
+}
+
+.queue-head {
+    height: 38px;
+    border-radius: 8px;
+    color: #6D7A72;
+    background: #F4F7F5;
+    font-size: 11px;
+}
+
+.queue-row {
+    height: 63px;
+    border-bottom: 1px solid var(--border);
+    font-size: 12px;
+}
+
+.queue-row .cell-name { font-size: 13px; font-weight: 500; }
+.queue-row .cell-time { color: #6D7A72; font-size: 11px; }
+
+.pill {
+    height: 26px;
+    padding: 0 12px;
+    display: inline-flex;
+    align-items: center;
+    border-radius: 20px;
+    font-size: 11px;
+    font-weight: 500;
+}
+
+.pill.wait { color: #8A5A00; background: #FDF3DC; }
+.pill.use { color: var(--green); background: var(--green-soft); }
+.pill.paid { color: #6D7A72; background: #F0F3F1; }
+
+.row-action {
+    padding: 0;
+    border: 0;
+    color: var(--green);
+    background: transparent;
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.row-action:hover { text-decoration: underline; }
+
+/* VIỆC CẦN LÀM */
+.todo-item {
+    margin-bottom: 17px;
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.todo-check {
+    width: 20px;
+    height: 20px;
+    flex: 0 0 20px;
+    display: grid;
+    place-items: center;
+    border: 1.5px solid #D3DDD6;
+    border-radius: 5px;
+    background: var(--white);
+    cursor: pointer;
+}
+
+.todo-check.checked {
+    border-color: var(--green);
+    background: var(--green);
+}
+
+.todo-check svg {
+    width: 13px;
+    height: 13px;
+    fill: none;
+    stroke: var(--white);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.todo-item strong {
+    display: block;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.todo-item span {
+    margin-top: 5px;
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.todo-end {
+    margin-top: 6px;
+    border-top: 1px solid var(--border);
+}
+
+@media (max-width: 1180px) {
+    .stats { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+}
+
+@media (max-width: 980px) {
+    .home-grid { grid-template-columns: 1fr; }
+}
+
+@media (max-width: 700px) {
+    .home-head { flex-direction: column; }
+    .home-head h1 { font-size: 22px; line-height: 30px; }
+}
+
+@media (max-width: 520px) {
+    .stats { grid-template-columns: 1fr; }
+}

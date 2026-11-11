@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bán hàng - Picklehead Booking</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;450;500;600;650;700;750&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <aside class="sidebar">
+        <div class="brand">
+            <img class="brand-logo" src="data:image/png;base64,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" alt="Picklehead Logo">
+            <div class="brand-copy">
+                <h2>Picklehead<br>Booking</h2>
+                <p>My Khe Beach ·<br>Pickleball Club</p>
+            </div>
+        </div>
+
+        <nav class="main-nav">
+            <a class="nav-item" href="trangchu.html">
+                <svg viewBox="0 0 24 24"><rect width="7" height="9" x="3" y="3" rx="1"/><rect width="7" height="5" x="14" y="3" rx="1"/><rect width="7" height="9" x="14" y="12" rx="1"/><rect width="7" height="5" x="3" y="16" rx="1"/></svg>
+                Tổng quan
+            </a>
+            <a class="nav-item" href="#">
+                <svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18M8 14h.01M12 14h.01M16 14h.01M8 18h.01M12 18h.01M16 18h.01"/></svg>
+                Quản lý đặt sân
+            </a>
+            <a class="nav-item active" href="#">
+                <svg viewBox="0 0 24 24"><circle cx="8" cy="21" r="1"/><circle cx="19" cy="21" r="1"/><path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/></svg>
+                Bán hàng
+            </a>
+            <a class="nav-item" href="khachhang.html">
+                <svg viewBox="0 0 24 24"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+                Tìm kiếm khách hàng
+            </a>
+            <a class="nav-item" href="#">
+                <svg viewBox="0 0 24 24"><path d="M8 2v4M16 2v4"/><rect width="18" height="18" x="3" y="4" rx="2"/><path d="M3 10h18"/><rect width="4" height="4" x="8" y="14" rx=".5"/></svg>
+                Dời lịch đặt sân
+            </a>
+        </nav>
+
+        <div class="bottom-nav">
+            <a class="nav-item" href="#">
+                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3M12 17h.01"/></svg>
+                Trung tâm hỗ trợ
+            </a>
+            <a class="nav-item" href="chonca.html">
+                <svg viewBox="0 0 24 24"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4M16 17l5-5-5-5M21 12H9"/></svg>
+                Đăng xuất
+            </a>
+        </div>
+    </aside>
+
+    <header class="topbar">
+        <div class="topbar-date" data-today>Chủ nhật, 01/11/2026</div>
+        <button class="notification" type="button" aria-label="Thông báo">
+            <svg viewBox="0 0 24 24"><path d="M6 8a6 6 0 0 1 12 0c0 7 3 9 3 9H3s3-2 3-9M10.3 21a1.94 1.94 0 0 0 3.4 0"/></svg>
+        </button>
+        <div class="staff">
+            <div class="avatar" data-shift-code>CS</div>
+            <div class="staff-copy">
+                <strong data-shift>Ca sáng</strong>
+                <span>Lê Thu Thảo</span>
+            </div>
+        </div>
+    </header>
+
+    <main class="main-content">
+        <h1 class="page-title">Bán hàng</h1>
+
+        <div class="workspace">
+            <section class="left-column">
+                <div class="tabs">
+                    <button class="tab active" id="goodsTab" type="button" onclick="changeTab('goods')">
+                        <svg viewBox="0 0 24 24"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4ZM3 6h18M16 10a4 4 0 0 1-8 0"/></svg>
+                        Chọn hàng hóa <b id="tabCount">2</b>
+                    </button>
+                    <button class="tab" id="serviceTab" type="button" onclick="changeTab('service')">
+                        <svg viewBox="0 0 24 24"><path d="m11 17 2 2a1 1 0 1 0 3-3"/><path d="m14 14 2.5 2.5a1 1 0 1 0 3-3l-3.88-3.88a3 3 0 0 0-4.24 0l-.88.88a1 1 0 1 1-3-3l2.81-2.81a5.79 5.79 0 0 1 7.06-.87l.47.28a2 2 0 0 0 1.42.25L21 4"/><path d="m21 3 1 11h-2M3 3 2 14l6.5 6.5a1 1 0 1 0 3-3M3 4h8"/></svg>
+                        Chọn dịch vụ <b id="serviceTabCount" hidden>0</b>
+                    </button>
+                </div>
+
+                <div class="catalog-card">
+                    <div class="section-heading">
+                        <h2 id="sectionTitle">Hàng hóa tại sân</h2>
+                        <p id="sectionDescription">Chọn đồ uống và phụ kiện để buổi chơi trọn vẹn hơn.</p>
+                    </div>
+
+                    <div id="goodsPanel">
+                    <div class="toolbar" id="filterArea">
+                        <div class="categories">
+                            <button class="category active" type="button" onclick="filterCategory('all', this)">Tất cả</button>
+                            <button class="category" type="button" onclick="filterCategory('drink', this)">Đồ uống</button>
+                            <button class="category" type="button" onclick="filterCategory('accessory', this)">Phụ kiện</button>
+                        </div>
+                        <label class="search-box">
+                            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg>
+                            <input type="text" id="searchInput" placeholder="Tìm hàng hóa..." oninput="searchProduct()">
+                        </label>
+                    </div>
+
+                    <div class="product-table">
+                        <div class="table-head">
+                            <div>SẢN PHẨM</div>
+                            <div>ĐƠN GIÁ</div>
+                            <div>SỐ LƯỢNG</div>
+                            <div>THÀNH TIỀN</div>
+                        </div>
+                        <div id="productList"></div>
+                    </div>
+                    </div>
+
+                    <div id="servicePanel" hidden>
+                        <label class="search-box service-search">
+                            <svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+                            <input type="text" id="serviceSearch" placeholder="Tìm kiếm dịch vụ..." oninput="displayServices()">
+                        </label>
+                        <div class="service-list" id="serviceList"></div>
+                    </div>
+
+                    <div class="catalog-footer" id="catalogFooter">
+                        <div>
+                            <span id="selectedInfo">Đã chọn 2 loại · 5 sản phẩm</span>
+                            <small id="selectedDetail" hidden></small>
+                        </div>
+                        <div class="footer-total">
+                            <small id="footerLabel" hidden>Tổng dịch vụ</small>
+                            <strong id="footerTotal">80.000đ</strong>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="create-row">
+                    <button class="create-button" type="button" onclick="createOrder()">Tạo đơn hàng</button>
+                </div>
+            </section>
+
+            <aside class="order-card">
+                <div class="order-heading">
+                    <h2>Thông tin đơn hàng</h2>
+                    <svg viewBox="0 0 24 24"><rect width="8" height="4" x="8" y="2" rx="1"/><path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2M12 11h4M12 16h4M8 11h.01M8 16h.01"/></svg>
+                </div>
+
+                <div class="venue">
+                    <strong>Picklehead Booking</strong>
+                    <p>84 Chế Lan Viên, Mỹ An, Ngũ Hành Sơn, Đà Nẵng</p>
+                </div>
+
+                <hr class="divider">
+
+                <div class="order-line">
+                    <span>Hàng hóa · <span id="productCount">5</span> sản phẩm</span>
+                    <strong id="orderSubtotal">80.000đ</strong>
+                </div>
+                <div class="order-products" id="orderProducts">4 nước suối · 1 bóng pickleball</div>
+
+                <div id="serviceBlock" hidden>
+                    <div class="order-line service-line">
+                        <span>Dịch vụ · <span id="serviceCount">0</span> lượt</span>
+                        <strong id="serviceSubtotal">0đ</strong>
+                    </div>
+                    <div class="order-products" id="serviceProducts"></div>
+                </div>
+
+                <hr class="divider">
+
+                <div class="grand-total">
+                    <strong>Tổng thanh toán</strong>
+                    <b id="orderTotal">80.000đ</b>
+                </div>
+                <div class="tax-note">Đã bao gồm thuế và phí dịch vụ</div>
+            </aside>
+        </div>
+    </main>
+
+    <script src="common.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

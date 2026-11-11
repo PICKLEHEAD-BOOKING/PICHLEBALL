@@ -1,0 +1,331 @@
+/* Trang chọn ca làm — không có sidebar */
+body { font-family: 'Poppins', 'Inter', sans-serif; }
+
+.topbar { margin-left: 0; padding: 0 36px; }
+
+.avatar { font-size: 11px; }
+
+.main-content {
+    margin-left: 0;
+    padding: 32px 36px 56px;
+}
+
+.page-head {
+    margin-bottom: 28px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.page-head h1 {
+    color: #1F2A24;
+    font-size: 28px;
+    line-height: 36px;
+    font-weight: 600;
+    letter-spacing: -0.4px;
+}
+
+.page-head p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 13px;
+}
+
+.off-pill {
+    height: 32px;
+    margin-top: 12px;
+    padding: 0 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    border: 1px solid var(--border);
+    border-radius: 20px;
+    color: #6D7A72;
+    background: var(--white);
+    font-size: 11px;
+    white-space: nowrap;
+}
+
+.off-pill::before {
+    content: "";
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background: currentColor;
+}
+
+.picker {
+    margin-bottom: 28px;
+    overflow: hidden;
+    background: var(--white);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+}
+
+.picker-body { padding: 28px 27px 24px; }
+
+.picker-head {
+    margin-bottom: 24px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 12px;
+}
+
+.picker-head h2 {
+    font-size: 17px;
+    font-weight: 600;
+}
+
+.picker-head p {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.picker-count {
+    margin-top: 12px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.shift-options {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 20px;
+}
+
+.shift-card {
+    min-height: 227px;
+    padding: 23px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    color: var(--text);
+    background: var(--white);
+    text-align: left;
+    cursor: pointer;
+    transition: border-color .15s, background .15s;
+}
+
+.shift-card:hover { border-color: #A9C7B1; }
+
+.shift-card.selected {
+    padding: 22px;
+    border: 2px solid var(--green-dark);
+    background: #EDF5EF;
+}
+
+.shift-card-icon {
+    width: 56px;
+    height: 56px;
+    margin-bottom: 20px;
+    display: grid;
+    place-items: center;
+    border-radius: 10px;
+    color: var(--green);
+    background: #F3F6F4;
+}
+
+.shift-card.selected .shift-card-icon {
+    color: var(--white);
+    background: var(--green-dark);
+}
+
+.shift-card-icon svg {
+    width: 28px;
+    height: 28px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.5;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.radio {
+    width: 22px;
+    height: 22px;
+    position: absolute;
+    top: 22px;
+    right: 22px;
+    display: grid;
+    place-items: center;
+    border: 1.5px solid #CBD6CE;
+    border-radius: 50%;
+    background: var(--white);
+}
+
+.radio.checked {
+    border-color: var(--green-dark);
+    background: var(--green-dark);
+}
+
+.radio svg {
+    width: 12px;
+    height: 12px;
+    fill: none;
+    stroke: var(--white);
+    stroke-width: 3;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.shift-card strong {
+    font-size: 22px;
+    line-height: 30px;
+    font-weight: 600;
+}
+
+.shift-card.selected strong { color: var(--green); }
+
+.shift-desc {
+    margin-top: 8px;
+    color: var(--muted);
+    font-size: 12px;
+}
+
+.shift-state {
+    margin-top: auto;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.shift-card.selected .shift-state {
+    color: var(--green);
+    font-weight: 600;
+}
+
+.picker-note {
+    margin-top: 24px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.picker-note svg {
+    width: 16px;
+    height: 16px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.6;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.picker-foot {
+    padding: 28px 27px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+    border-top: 1px solid var(--border);
+}
+
+.chosen {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+}
+
+.chosen-icon {
+    width: 42px;
+    height: 42px;
+    display: grid;
+    place-items: center;
+    border-radius: 8px;
+    color: var(--green);
+    background: var(--green-soft);
+}
+
+.chosen-icon svg,
+.confirm-button svg,
+.ready-note > svg {
+    width: 20px;
+    height: 20px;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.7;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+}
+
+.chosen small {
+    display: block;
+    color: var(--muted);
+    font-size: 11px;
+}
+
+.chosen strong {
+    margin-top: 2px;
+    display: block;
+    color: var(--green);
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.confirm-button {
+    height: 48px;
+    padding: 0 22px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    border: 0;
+    border-radius: 8px;
+    color: var(--white);
+    background: var(--green-dark);
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: background .15s;
+}
+
+.confirm-button:hover { background: #145425; }
+
+.ready-note {
+    padding: 20px 22px;
+    display: flex;
+    align-items: flex-start;
+    gap: 16px;
+    border-radius: 8px;
+    color: var(--green);
+    background: #EAF3EC;
+}
+
+.ready-note strong {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.ready-note p {
+    margin-top: 8px;
+    color: var(--text);
+    font-size: 11px;
+}
+
+.shift-card:focus-visible,
+.confirm-button:focus-visible {
+    outline: 2px solid var(--green);
+    outline-offset: 2px;
+}
+
+@media (max-width: 900px) {
+    .shift-options { grid-template-columns: 1fr; }
+    .shift-card { min-height: 190px; }
+}
+
+@media (max-width: 700px) {
+    .topbar { padding: 0 16px; }
+    .main-content { padding: 22px 14px 40px; }
+    .page-head h1 { font-size: 22px; line-height: 30px; }
+    .picker-body, .picker-foot { padding-right: 16px; padding-left: 16px; }
+    .picker-head { flex-direction: column; }
+    .picker-foot { flex-direction: column; align-items: stretch; }
+    .confirm-button { justify-content: center; }
+}
