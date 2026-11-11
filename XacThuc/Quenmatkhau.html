@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Quên mật khẩu - Picklehead Booking</title>
+<link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="XacThuc.css">
+</head>
+<body data-page="forgot">
+<main class="auth-card">
+  <h1>Quên mật khẩu</h1>
+  <p class="sub">Nhập email hoặc số điện thoại đã đăng kí để nhận mã OTP và đặt lại mật khẩu.</p>
+  <form novalidate>
+    <div class="field"><label class="required" for="identity">Email đã đăng ký</label>
+      <input id="identity" name="identity" type="text" placeholder="Nhập email đăng ký" autocomplete="email"></div>
+    <button class="btn btn-primary" type="submit">Gửi</button>
+  </form>
+  <div class="divider"></div>
+  <p class="foot"><a class="link back" data-route="dangNhap">← Quay lại đăng nhập</a></p>
+</main>
+<script src="Router.js"></script>
+<script src="XacThuc.js"></script>
+</body>
+</html>
